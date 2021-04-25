@@ -68,7 +68,7 @@ def main(argv):
             output_file = open(arg, 'w', newline='\n')
 
     # Creating a new list of file names with a loop that checks for files, eliminating folders
-    files = [f for f in listdir(path) if isfile(join(path, f))]
+    files = [f for f in listdir(path) if isfile(join(path, f)) and ".csv" in f]
 
     # Declaring the variable writer where we input our file name and the headers declared above as arguments
     writer = csv.DictWriter(output_file, fieldnames=headers)
