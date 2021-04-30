@@ -85,7 +85,7 @@ def main(argv):
         # Extracting and formatting the date
         date_string = file.split('_')[0][-11:]
         date_obj = datetime.strptime(date_string, "%d-%b-%Y")
-        date_formatted = date_obj.strftime("%d/%m/%Y")
+        date_formatted = date_obj.strftime("%b/%Y")
 
         # Opening the csv_files one at a time and reading its content, specifying its delimiter
         with open(path + file, mode='r', encoding='utf-16') as csv_file:
